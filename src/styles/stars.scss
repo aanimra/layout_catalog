@@ -3,7 +3,7 @@
 
   &__star {
     background-image: url(../images/star.svg);
-    background-position: 50%;
+    background-position: $star-background-position;
     background-repeat: no-repeat;
     width: $star-size;
     height: $star-size;
@@ -18,3 +18,4 @@
     background-image: url(../images/star-active.svg);
   }
 }
+

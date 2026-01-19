@@ -1,5 +1,5 @@
 .catalog {
-  padding: $card-padding-vertical $card-padding-horizontal;
+  padding: $card-catalog-padding-vertical $card-catalog-padding-horizontal;
 
   display: grid;
   grid-template-columns: repeat(1, $card-width);
