@@ -1,21 +1,25 @@
 .card {
-  padding: 32px 16px 16px;
+  padding: 32px $padding-inline 16px;
   box-sizing: border-box;
-  width: 200px;
+  width: $card-width;
   background-color: $background-color;
   border: 1px solid $card-border-color;
-  border-radius: 5px;
+  border-radius: $card-border-radius;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  transition: transform 300ms;
+  transition: transform $transition-duration;
 
   &:hover {
     transform: scale(1.2);
     z-index: 2;
     position: relative;
+
+    .card__title {
+      color: $card-title-color-hover;
+    }
   }
 
   &__image {
@@ -29,13 +33,13 @@
 
   &__title {
     font-weight: 500;
-    font-size: 12px;
+    font-size: $font-size;
     line-height: 18px;
     color: $main-text-color;
     text-decoration: none;
     margin-bottom: 4px;
     align-self: flex-start;
-    transition: 300ms;
+    transition: $transition-duration;
   }
 
   &__product-code {
@@ -84,27 +88,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: $button-height;
     width: 100%;
-    color: #fff;
+    color: $background-color;
     border: 1px solid $card-button-color;
-    border-radius: 5px;
-    border-color: $card-button-color;
+    border-radius: $button-border-radius;
     background-color: $card-button-color;
     line-height: 16px;
     font-size: 14px;
     font-weight: 700;
-    transition: 300ms;
+    transition: $transition-duration;
   }
 
   &__button:hover {
     border: 1px solid $card-button-color;
     color: $card-button-color;
-    background-color: #fff;
+    background-color: $background-color;
     cursor: pointer;
   }
-}
-
-.card:hover .card__title {
-  color: $card-title-color-hover;
 }
